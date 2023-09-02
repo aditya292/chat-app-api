@@ -19,8 +19,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://192.168.16.171",
-  "http://example2.com",
-  "http://example3.com",
+  "https://chat-app-frontend-7nin.onrender.com",
 ];
 
 const corsOptions = {
