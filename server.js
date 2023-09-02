@@ -16,6 +16,19 @@ dotenv.config();
 connectDB();
 const app = express();
 
+const allowedOrigins = [
+  "http://192.168.16.171",
+  "http://example2.com",
+  "http://example3.com",
+];
+
+const corsOptions = {
+  origin: allowedOrigins,
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json()); //to accept json data
 
 app.use("/api/user", userRoutes);
